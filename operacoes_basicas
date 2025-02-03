@@ -1,0 +1,146 @@
+'''name = input('tell me your name: ')
+color = input('tell me your favorite color: ')
+print(f'{name} likes {color}')
+
+
+birth_year = input('tell me your birth year: ')
+print(type(birth_year))
+age = 2025 - int(birth_year)
+print(type(age))
+print(f'{age} years old')
+
+weight = input('tell me your weight: ')
+kilograms = int(weight) * 0.45
+print(f'{kilograms} kilograms')
+
+course = 'Python for beginners'
+print(course[1:13])
+another = course[:]
+print(another)
+
+name = 'Jennifer'
+print(name[1:-1])
+
+first = 'adriane'
+last = 'sarmento'
+msg = f'{first} [{last}] is a coder'
+print(msg)
+
+course = 'Python for Beginners'
+print(len(course))
+print(course.upper())
+print(course.lower())
+print(course.find('B'))
+print(course.replace('Python', 'Java'))
+print('Python' in course)
+
+x = 10
+x *= 3
+print(x)
+
+x = 2.9
+print(round(x))
+print(abs(-2.9))
+
+import math
+
+print(math.ceil(2.9))
+print(math.floor(2.9))
+
+is_hot = True
+is_cold = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+elif is_cold:
+    print("It's a cold day")
+    print("Wear warm clothes")
+else:
+    print("it's a lovely day")
+print("Enjoy your day")
+
+price = 1000000
+good_credit = False
+if good_credit:
+    down_payment = (price * 0.1)
+else:
+    down_payment = (price * 0.2)
+print(f"Down payment: R${down_payment}")
+
+has_high_income = True
+has_good_credit = False
+has_criminal_record = False
+
+if has_high_income and not has_criminal_record:
+    print("Eligible for loan")
+
+temperature= 35
+if temperature > 30:
+    print("it´s a hot day")
+else:
+    print("it´s not a hot day")
+
+name = "opi"
+
+if len(name) < 3:
+    print("name must be at least 3 characters")
+elif len(name) > 50:
+    print("name can be a maximum of 50 characters")
+else:
+    print("name looks good!")
+
+weight = int(input('tell me your weight: '))
+type_weight = input("(L)bs or (K)g: ")
+if type_weight.upper() == 'L':
+    converted = weight* 0.45
+    print(f"Weight is {converted} kg")
+elif type_weight.upper() == "K":
+    converted = weight// 0.45
+    print(f"Weight is {converted} lbs")
+else:
+    print('error')
+
+i = 1
+while i <= 5:
+    print('$' * i)
+    i = i + 1
+print('done')
+
+secret_number = 10
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: '))
+    guess_count += 1
+    if guess == secret_number:
+        print('You guessed it!')
+        break
+else:
+    print('Sorry, you lose :(')'''
+
+game_running = True
+started = False
+while game_running:
+    command = input('>').upper()
+    if command == 'HELP':
+        print('''
+start - to start the car
+stop - to stop the car
+quit - to exit'''
+              )
+    elif command == 'START':
+        if started:
+            print('already started')
+        else:
+            started = True
+            print('Car started... Ready to go!')
+    elif command == 'STOP':
+        if not started:
+            print('car already stopped')
+        else:
+            started = False
+            print('Car stopped.')
+    elif command == 'QUIT':
+        break
+    else:
+        print('Unknown command')
